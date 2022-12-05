@@ -14,6 +14,6 @@ RSpec.describe AmazonSesMailer::Base do
       expect(AmazonSesMailer::Message).to receive(:new)
       subject.mail(options)
     end
-    
+
   end
 end
