@@ -12,6 +12,7 @@ RSpec.describe AmazonSesMailer::Message do
     end
 
     it 'deliver the email' do
+      
       expect(AmazonSesMailer::Message).to receive(:send_email)
     end
 
