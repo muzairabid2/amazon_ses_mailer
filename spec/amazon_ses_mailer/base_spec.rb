@@ -5,8 +5,9 @@ RSpec.describe AmazonSesMailer::Base do
   subject { described_class.new(template_name) }
 
   describe '#mail' do
+
     before do
-      allow(AmazonSesMailer::Base).to receieve(:delivery_method)
+      allow(AmazonSesMailer::Base).to receive(:delivery_method)
         .and_return(delivery_method)
     end
 
