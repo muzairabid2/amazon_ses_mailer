@@ -1,3 +1,4 @@
+require 'aws-sdk-sesv2'
 module AmazonSesMailer
   class Message
     attr_reader :message
@@ -7,7 +8,7 @@ module AmazonSesMailer
     end
 
     def ses_client
-      self.class.ses_client ||= ::Aws::SESV2::Client.new
+      self.class.ses_client ||= ::Aws::SESV2::Client.new(:region => "us-east-1")
     end
 
     def initialize(options, interceptors, delivery_proc)

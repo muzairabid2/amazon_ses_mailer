@@ -5,6 +5,7 @@ RSpec.describe AmazonSesMailer::Message do
   let(:delivery_proc) { nil }
   subject { described_class.new(options, interceptors, delivery_proc) }
 
+
   describe '#send_email' do
 
     before do
@@ -12,7 +13,6 @@ RSpec.describe AmazonSesMailer::Message do
     end
 
     it 'deliver the email' do
-      
       expect(AmazonSesMailer::Message).to receive(:send_email)
     end
 
